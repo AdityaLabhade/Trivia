@@ -80,9 +80,10 @@ public class QuizFragment1 extends Fragment {
             int selectedId = binding.answersRadioGroup.getCheckedRadioButtonId();
             // find the radiobutton by returned id
             RadioButton selectedRadioButton =  binding.getRoot().findViewById(selectedId);
-            quizResult.setAnswer(selectedRadioButton.getText().toString());
-
-            if (quizResult.getAnswer().equals("")) {
+            if(selectedRadioButton != null) {
+                quizResult.setAnswer(selectedRadioButton.getText().toString());
+            }
+            if (quizResult != null && quizResult.getAnswer().equals("")) {
                 Toast.makeText(getActivity(), getResources().getString(R.string.error_select_answer), Toast.LENGTH_SHORT).show();
                 return;
             }

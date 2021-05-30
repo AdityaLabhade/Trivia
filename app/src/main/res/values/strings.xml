@@ -11,13 +11,14 @@
     <string name="virat_kohali_option">Virat Kohali</string>
     <string name="adam_gilchirst_option">Adam Gilchirst</string>
     <string name="jacques_kallis_option">Jacques Kallis</string>
-    <string name="error_select_answer">Please select your answer</string>
 
     <string name="quiz2">What are the colors in the Indian national flag?</string>
     <string name="white_option">White</string>
     <string name="yellow_option">Yellow</string>
     <string name="orange_option">Orange</string>
     <string name="green_option">Green</string>
+
+    <string name="error_select_answer">Please select at least one option</string>
 
 
     <string name="finish_button_text">Finish</string>
