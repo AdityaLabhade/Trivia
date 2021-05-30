@@ -1,8 +1,5 @@
 package com.appscripdemo.triviaapp.models;
 
-import android.os.Parcel;
-import android.os.Parcelable;
-
 import androidx.databinding.BaseObservable;
 import androidx.databinding.Bindable;
 

@@ -14,13 +14,9 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.appscripdemo.triviaapp.R;
-import com.appscripdemo.triviaapp.adapters.QuizResultAdapter;
 import com.appscripdemo.triviaapp.databinding.FragmentQuiz2Binding;
 import com.appscripdemo.triviaapp.models.QuizResult;
-import com.appscripdemo.triviaapp.room.entities.QuizResultEntity;
 import com.appscripdemo.triviaapp.viewmodels.QuizResultViewModel;
-
-import okhttp3.internal.Util;
 
 import static com.appscripdemo.triviaapp.ui.activities.MainActivity.QUIZ_ID_KEY;
 

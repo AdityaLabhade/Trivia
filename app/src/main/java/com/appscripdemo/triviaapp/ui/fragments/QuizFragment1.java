@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -49,30 +48,6 @@ public class QuizFragment1 extends Fragment {
 
         quizId =   getArguments() != null ? getArguments().getLong(QUIZ_ID_KEY): 0;
         quizResult.setQuizId(quizId);
-/*
-
-        binding.answersRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                switch (checkedId) {
-                    case R.id.optionOneRadioButton:
-                        quizResult.setAnswer(binding.optionOneRadioButton.getText().toString());
-                        break;
-
-                    case R.id.optionTwoRadioButton:
-                        quizResult.setAnswer(binding.optionTwoRadioButton.getText().toString());
-                        break;
-
-                    case R.id.optionThreeRadioButton:
-                        quizResult.setAnswer(binding.optionThreeRadioButton.getText().toString());
-                        break;
-
-                    case R.id.optionFourRadioButton:
-                        quizResult.setAnswer(binding.optionFourRadioButton.getText().toString());
-                        break;
-                }
-            }
-        });*/
     }
 
     public class ClickHandler {
