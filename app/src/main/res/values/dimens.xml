@@ -1,0 +1,17 @@
+<resources>
+
+    <dimen name="dimen_4">8dp</dimen>
+    <dimen name="dimen_6">6dp</dimen>
+    <dimen name="dimen_8">8dp</dimen>
+    <dimen name="dimen_16">16dp</dimen>
+    <dimen name="dimen_24">24dp</dimen>
+    <dimen name="dimen_48">48dp</dimen>
+    <dimen name="dimen_52">52dp</dimen>
+
+    <!--    Text dimensions-->
+    <dimen name="normal_text_size">16sp</dimen>
+    <dimen name="medium_text_size">20sp</dimen>
+    <dimen name="large_text_size">24sp</dimen>
+
+
+</resources>

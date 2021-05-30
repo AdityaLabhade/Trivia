@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.appscripdemo.triviaapp.ui.fragments.QuizFragment2">
+
+    <data>
+        <variable
+            name="handler"
+            type="com.appscripdemo.triviaapp.ui.fragments.QuizFragment2.ClickHandler" />
+
+        <variable
+            name="quizResult"
+            type="com.appscripdemo.triviaapp.models.QuizResult" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_16"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/questionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_16"
+            android:text="@string/quiz2"
+            android:textColor="@color/black"
+            android:textSize="@dimen/normal_text_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/questionTextView"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/optionOneCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/white_option"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/normal_text_size" />
+
+            <CheckBox
+                android:id="@+id/optionTwoCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yellow_option"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/normal_text_size" />
+
+            <CheckBox
+                android:id="@+id/optionThreeCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/orange_option"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/normal_text_size" />
+
+            <CheckBox
+                android:id="@+id/optionFourCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/green_option"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/normal_text_size" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/finishButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_48"
+            android:layout_margin="@dimen/dimen_8"
+            android:backgroundTint="@color/buttonPrimaryColor"
+            android:gravity="center"
+            android:onClick="@{handler::onNextButtonClick}"
+            android:text="@string/next_button_text"
+            android:textAlignment="center" />
+    </LinearLayout>
+</layout>

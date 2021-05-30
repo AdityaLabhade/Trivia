@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.fragments.HomeFragment">
+
+    <data>
+        <variable
+            name="handler"
+            type="com.appscripdemo.triviaapp.ui.fragments.QuizFragment1.ClickHandler" />
+
+        <variable
+            name="triviaInfo"
+            type="com.appscripdemo.triviaapp.models.QuizResult" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/dimen_16"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/questionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_16"
+            android:text="@string/quiz1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/normal_text_size" />
+
+        <RadioGroup
+            android:id="@+id/answersRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/optionOneRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sachin_tendulakar_option"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/normal_text_size" />
+
+            <RadioButton
+                android:id="@+id/optionTwoRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/virat_kohali_option"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/normal_text_size" />
+
+            <RadioButton
+                android:id="@+id/optionThreeRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/adam_gilchirst_option"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/normal_text_size" />
+
+            <RadioButton
+                android:id="@+id/optionFourRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jacques_kallis_option"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/normal_text_size" />
+        </RadioGroup>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/finishButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_48"
+            android:layout_margin="@dimen/dimen_8"
+            android:backgroundTint="@color/buttonPrimaryColor"
+            android:gravity="center"
+            android:onClick="@{handler::onNextButtonClick}"
+            android:text="@string/next_button_text"
+            android:textAlignment="center" />
+    </LinearLayout>
+</layout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.main.SummaryFragment">
+
+    <data>
+
+        <variable
+            name="quizDetails"
+            type="com.appscripdemo.triviaapp.models.QuizDetails" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_8"
+                android:text='@{"GAME "+quizDetails.id}'
+                android:textColor="@color/black"
+                android:textSize="@dimen/large_text_size" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_8"
+                android:text='@{" : "+quizDetails.dateTime}'
+                android:textColor="@color/black"
+                android:textSize="@dimen/large_text_size" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_8"
+            android:text='@{"NAME: "+quizDetails.userName}'
+            android:textColor="@color/black"
+            android:textSize="@dimen/large_text_size" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/quizDetailsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</layout>

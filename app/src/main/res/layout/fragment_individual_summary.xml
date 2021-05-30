@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.appscripdemo.triviaapp.ui.fragments.SummaryFragment">
+
+    <data>
+
+        <variable
+            name="handler"
+            type="com.appscripdemo.triviaapp.ui.fragments.SummaryFragment.ClickHandler" />
+
+        <variable
+            name="quizDetails"
+            type="com.appscripdemo.triviaapp.models.QuizDetails" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColor"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_16">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/userNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_24"
+            android:text='@{"Hello, "+quizDetails.userName}'
+            android:textColor="@color/black"
+            android:textSize="@dimen/large_text_size" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_24"
+            android:text="@string/selected_answers"
+            android:textColor="@color/black"
+            android:textSize="@dimen/medium_text_size" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/quizDetailsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/finishButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_48"
+            android:layout_margin="@dimen/dimen_8"
+            android:backgroundTint="@color/buttonPrimaryColor"
+            android:gravity="center"
+            android:onClick="@{handler::onFinishButtonClick}"
+            android:text="@string/finish_button_text"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+</layout>
